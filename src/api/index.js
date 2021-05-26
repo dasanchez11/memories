@@ -1,7 +1,8 @@
 import axios from 'axios';
+import dotenv from 'dotenv'
 
-
-const url = 'http://localhost:5000/posts';
+const URL = process.env.URL
+const url = URL
 
 export const fetchPosts = () => axios.get(url);
 export const createPost = (newPost) => axios.post(url, newPost)
